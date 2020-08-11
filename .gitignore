@@ -1,0 +1,8 @@
+CamVid
+Logs*
+data
+pretrainModel
+pretrain
+models/NewNet
+.vscode
+*.pyc

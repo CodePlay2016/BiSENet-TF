@@ -1,0 +1,259 @@
+/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/local/lib/python3.5/dist-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+INFO - bisenet-v2 - Running command 'main'
+INFO - bisenet-v2 - Started run with ID "2"
+WARNING - root - img_mean is not explicitly specified, using default value: None
+INFO - root - preproces -- augment
+WARNING:tensorflow:From /home/weihh/python/bise-net/models/bisenet.py:276: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING - tensorflow - From /home/weihh/python/bise-net/models/bisenet.py:276: calling reduce_mean (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/weihh/python/bise-net/models/bisenet.py:330: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See @{tf.nn.softmax_cross_entropy_with_logits_v2}.
+
+WARNING - tensorflow - From /home/weihh/python/bise-net/models/bisenet.py:330: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See @{tf.nn.softmax_cross_entropy_with_logits_v2}.
+
+WARNING - root - img_mean is not explicitly specified, using default value: None
+WARNING - root - random_scale is not explicitly specified, using default value: False
+WARNING - root - random_mirror is not explicitly specified, using default value: True
+INFO - root - preproces -- None
+2020-04-29 16:51:18.547123: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-04-29 16:51:19.974837: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla V100-SXM2-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:8a:00.0
+totalMemory: 31.72GiB freeMemory: 31.41GiB
+2020-04-29 16:51:20.416900: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla V100-SXM2-32GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:8b:00.0
+totalMemory: 31.72GiB freeMemory: 31.41GiB
+2020-04-29 16:51:20.416982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2020-04-29 16:51:21.306959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-04-29 16:51:21.306999: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2020-04-29 16:51:21.307009: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2020-04-29 16:51:21.307015: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2020-04-29 16:51:21.307704: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30485 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:8a:00.0, compute capability: 7.0)
+2020-04-29 16:51:21.310283: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 30485 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-32GB, pci bus id: 0000:8b:00.0, compute capability: 7.0)
+INFO - root - Restore from last checkpoint: Logs1/bisenet/checkpoints/bisenet-v2/model.ckpt-0
+INFO:tensorflow:Restoring parameters from Logs1/bisenet/checkpoints/bisenet-v2/model.ckpt-0
+INFO - tensorflow - Restoring parameters from Logs1/bisenet/checkpoints/bisenet-v2/model.ckpt-0
+INFO - root - Train for 450000 steps
+2020-04-29 16:53:47.423080: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 400.2KiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 16:53:47.423203: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 16:56:23.814107: step 10, total loss = nan, (0.6 examples/sec; 26.241 sec/batch; 3280h:01m:45s remains)
+INFO - root - 2020-04-29 17:00:46.933874: step 20, total loss = nan, (0.6 examples/sec; 26.147 sec/batch; 3268h:12m:25s remains)
+INFO - root - 2020-04-29 17:05:08.945211: step 30, total loss = nan, (0.6 examples/sec; 26.194 sec/batch; 3274h:02m:24s remains)
+2020-04-29 17:07:47.618136: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.56MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:07:47.618243: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 17:09:30.762770: step 40, total loss = nan, (0.6 examples/sec; 26.278 sec/batch; 3284h:26m:06s remains)
+INFO - root - 2020-04-29 17:13:51.919997: step 50, total loss = nan, (0.6 examples/sec; 26.109 sec/batch; 3263h:16m:18s remains)
+INFO - root - 2020-04-29 17:18:12.959581: step 60, total loss = nan, (0.6 examples/sec; 25.982 sec/batch; 3247h:17m:35s remains)
+2020-04-29 17:19:32.544757: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:19:32.544851: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 17:22:33.995868: step 70, total loss = nan, (0.6 examples/sec; 26.084 sec/batch; 3259h:58m:18s remains)
+2020-04-29 17:24:46.024276: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:24:46.024377: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 17:26:55.316154: step 80, total loss = nan, (0.6 examples/sec; 26.087 sec/batch; 3260h:18m:25s remains)
+INFO - root - 2020-04-29 17:31:15.997970: step 90, total loss = nan, (0.6 examples/sec; 26.090 sec/batch; 3260h:38m:47s remains)
+INFO - root - 2020-04-29 17:35:38.054030: step 100, total loss = nan, (0.6 examples/sec; 26.056 sec/batch; 3256h:19m:54s remains)
+2020-04-29 17:37:24.139115: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:37:24.139214: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 17:39:59.610889: step 110, total loss = nan, (0.6 examples/sec; 26.052 sec/batch; 3255h:42m:05s remains)
+2020-04-29 17:42:11.342022: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:42:11.342122: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 17:44:20.239385: step 120, total loss = nan, (0.6 examples/sec; 26.083 sec/batch; 3259h:32m:14s remains)
+2020-04-29 17:45:40.213434: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:45:40.213531: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 17:48:41.619294: step 130, total loss = nan, (0.6 examples/sec; 26.005 sec/batch; 3249h:37m:56s remains)
+INFO - root - 2020-04-29 17:53:02.629302: step 140, total loss = nan, (0.6 examples/sec; 26.121 sec/batch; 3264h:09m:05s remains)
+2020-04-29 17:53:55.513197: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:53:55.513370: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 17:53:56.316850: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.56MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 17:53:56.316945: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 17:57:23.795756: step 150, total loss = nan, (0.6 examples/sec; 26.113 sec/batch; 3263h:02m:55s remains)
+INFO - root - 2020-04-29 18:01:44.477188: step 160, total loss = nan, (0.6 examples/sec; 26.193 sec/batch; 3272h:58m:51s remains)
+INFO - root - 2020-04-29 18:06:05.804197: step 170, total loss = nan, (0.6 examples/sec; 26.253 sec/batch; 3280h:21m:16s remains)
+2020-04-29 18:08:17.884254: W tensorflow/core/common_runtime/bfc_allocator.cc:219] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25MiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-04-29 18:08:17.884355: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 18:10:27.524657: step 180, total loss = nan, (0.6 examples/sec; 26.043 sec/batch; 3254h:05m:00s remains)
+INFO - root - 2020-04-29 18:14:48.216462: step 190, total loss = nan, (0.6 examples/sec; 26.107 sec/batch; 3261h:56m:33s remains)
+INFO - root - 2020-04-29 18:19:09.793347: step 200, total loss = nan, (0.6 examples/sec; 26.283 sec/batch; 3283h:54m:54s remains)
+2020-04-29 18:19:37.853196: W tensorflow/stream_executor/cuda/cuda_dnn.cc:3797] 
+INFO - root - 2020-04-29 18:23:31.434899: step 210, total loss = nan, (0.6 examples/sec; 26.064 sec/batch; 3256h:29m:27s remains)
+2020-04-29 18:24:51.048099: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 18:27:52.462348: step 220, total loss = nan, (0.6 examples/sec; 26.170 sec/batch; 3269h:36m:16s remains)
+INFO - root - 2020-04-29 18:32:13.922292: step 230, total loss = nan, (0.6 examples/sec; 26.203 sec/batch; 3273h:41m:06s remains)
+INFO - root - 2020-04-29 18:36:35.759842: step 240, total loss = nan, (0.6 examples/sec; 26.069 sec/batch; 3256h:53m:32s remains)
+INFO - root - 2020-04-29 18:40:54.824610: step 250, total loss = nan, (0.6 examples/sec; 25.856 sec/batch; 3230h:13m:56s remains)
+INFO - root - 2020-04-29 18:45:16.479933: step 260, total loss = nan, (0.6 examples/sec; 26.148 sec/batch; 3266h:40m:10s remains)
+INFO - root - 2020-04-29 18:49:37.683783: step 270, total loss = nan, (0.6 examples/sec; 26.138 sec/batch; 3265h:14m:06s remains)
+2020-04-29 18:53:08.288694: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 18:53:59.337735: step 280, total loss = nan, (0.6 examples/sec; 26.110 sec/batch; 3261h:43m:08s remains)
+2020-04-29 18:57:56.503226: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 18:58:21.322453: step 290, total loss = nan, (0.6 examples/sec; 26.293 sec/batch; 3284h:33m:44s remains)
+INFO - root - 2020-04-29 19:02:42.851541: step 300, total loss = nan, (0.6 examples/sec; 26.040 sec/batch; 3252h:48m:23s remains)
+INFO - root - 2020-04-29 19:07:04.664118: step 310, total loss = nan, (0.6 examples/sec; 26.399 sec/batch; 3297h:33m:48s remains)
+2020-04-29 19:10:09.535521: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 19:11:26.913227: step 320, total loss = nan, (0.6 examples/sec; 26.100 sec/batch; 3260h:07m:33s remains)
+2020-04-29 19:13:38.854311: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 19:14:04.886022: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 19:15:48.196503: step 330, total loss = nan, (0.6 examples/sec; 26.213 sec/batch; 3274h:10m:59s remains)
+INFO - root - 2020-04-29 19:20:09.324404: step 340, total loss = nan, (0.6 examples/sec; 26.068 sec/batch; 3256h:02m:17s remains)
+INFO - root - 2020-04-29 19:24:30.536927: step 350, total loss = nan, (0.6 examples/sec; 26.048 sec/batch; 3253h:26m:08s remains)
+INFO - root - 2020-04-29 19:28:51.995936: step 360, total loss = nan, (0.6 examples/sec; 26.023 sec/batch; 3250h:15m:30s remains)
+INFO - root - 2020-04-29 19:33:13.583369: step 370, total loss = nan, (0.6 examples/sec; 26.011 sec/batch; 3248h:44m:11s remains)
+2020-04-29 19:34:33.739169: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 19:37:35.448127: step 380, total loss = nan, (0.6 examples/sec; 26.208 sec/batch; 3273h:15m:29s remains)
+INFO - root - 2020-04-29 19:41:57.452221: step 390, total loss = nan, (0.6 examples/sec; 26.101 sec/batch; 3259h:44m:31s remains)
+2020-04-29 19:45:28.225665: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 19:46:19.066851: step 400, total loss = nan, (0.6 examples/sec; 26.156 sec/batch; 3266h:36m:50s remains)
+INFO - root - 2020-04-29 19:50:41.173761: step 410, total loss = nan, (0.6 examples/sec; 26.372 sec/batch; 3293h:32m:41s remains)
+2020-04-29 19:51:08.780325: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 19:55:03.624848: step 420, total loss = nan, (0.6 examples/sec; 26.150 sec/batch; 3265h:44m:21s remains)
+INFO - root - 2020-04-29 19:59:25.032311: step 430, total loss = nan, (0.6 examples/sec; 26.105 sec/batch; 3259h:59m:57s remains)
+2020-04-29 20:00:18.492821: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 20:03:46.326277: step 440, total loss = nan, (0.6 examples/sec; 26.236 sec/batch; 3276h:16m:06s remains)
+INFO - root - 2020-04-29 20:08:07.829667: step 450, total loss = nan, (0.6 examples/sec; 26.087 sec/batch; 3257h:36m:58s remains)
+2020-04-29 20:08:35.316136: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 20:12:29.145608: step 460, total loss = nan, (0.6 examples/sec; 25.994 sec/batch; 3245h:53m:15s remains)
+2020-04-29 20:15:07.421617: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 20:16:26.017392: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 20:16:50.723767: step 470, total loss = nan, (0.6 examples/sec; 26.036 sec/batch; 3251h:02m:30s remains)
+2020-04-29 20:19:54.992119: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 20:21:12.048357: step 480, total loss = nan, (0.6 examples/sec; 26.155 sec/batch; 3265h:51m:12s remains)
+INFO - root - 2020-04-29 20:25:33.585731: step 490, total loss = nan, (0.6 examples/sec; 25.948 sec/batch; 3239h:57m:36s remains)
+INFO - root - 2020-04-29 20:29:53.386281: step 500, total loss = nan, (0.6 examples/sec; 26.044 sec/batch; 3251h:51m:35s remains)
+INFO - root - 2020-04-29 20:34:15.639580: step 510, total loss = nan, (0.6 examples/sec; 26.199 sec/batch; 3271h:13m:04s remains)
+INFO - root - 2020-04-29 20:38:37.991866: step 520, total loss = nan, (0.6 examples/sec; 26.379 sec/batch; 3293h:32m:49s remains)
+2020-04-29 20:39:58.099287: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 20:43:00.006619: step 530, total loss = nan, (0.6 examples/sec; 26.038 sec/batch; 3250h:57m:11s remains)
+INFO - root - 2020-04-29 20:47:22.372711: step 540, total loss = nan, (0.6 examples/sec; 26.358 sec/batch; 3290h:47m:32s remains)
+2020-04-29 20:49:34.530479: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 20:50:00.257197: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 20:51:43.578747: step 550, total loss = nan, (0.6 examples/sec; 26.088 sec/batch; 3257h:02m:27s remains)
+INFO - root - 2020-04-29 20:56:05.271459: step 560, total loss = nan, (0.6 examples/sec; 26.091 sec/batch; 3257h:15m:15s remains)
+2020-04-29 20:59:10.126892: W tensorflow/stream_executor/cuda/cuda_dnn.cc:3797] 
+2020-04-29 20:59:36.397818: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 21:00:27.348062: step 570, total loss = nan, (0.6 examples/sec; 26.125 sec/batch; 3261h:29m:57s remains)
+INFO - root - 2020-04-29 21:04:48.869070: step 580, total loss = nan, (0.6 examples/sec; 26.251 sec/batch; 3277h:08m:05s remains)
+INFO - root - 2020-04-29 21:09:10.841756: step 590, total loss = nan, (0.6 examples/sec; 26.218 sec/batch; 3272h:58m:37s remains)
+2020-04-29 21:12:41.420527: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 21:13:07.597515: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 21:13:32.423271: step 600, total loss = nan, (0.6 examples/sec; 26.216 sec/batch; 3272h:36m:55s remains)
+2020-04-29 21:13:33.790394: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 21:17:54.569139: step 610, total loss = nan, (0.6 examples/sec; 26.243 sec/batch; 3275h:53m:51s remains)
+2020-04-29 21:17:56.011103: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 21:18:48.260123: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 21:20:33.106535: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 21:22:16.739836: step 620, total loss = nan, (0.6 examples/sec; 26.380 sec/batch; 3292h:58m:41s remains)
+INFO - root - 2020-04-29 21:26:38.801720: step 630, total loss = nan, (0.6 examples/sec; 26.227 sec/batch; 3273h:48m:32s remains)
+2020-04-29 21:27:32.800778: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 21:30:10.060537: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 21:31:01.086687: step 640, total loss = nan, (0.6 examples/sec; 26.140 sec/batch; 3262h:54m:34s remains)
+2020-04-29 21:31:28.604510: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 21:35:22.780983: step 650, total loss = nan, (0.6 examples/sec; 26.319 sec/batch; 3285h:06m:21s remains)
+INFO - root - 2020-04-29 21:39:44.685664: step 660, total loss = nan, (0.6 examples/sec; 26.292 sec/batch; 3281h:37m:43s remains)
+INFO - root - 2020-04-29 21:44:07.154032: step 670, total loss = nan, (0.6 examples/sec; 26.252 sec/batch; 3276h:37m:02s remains)
+INFO - root - 2020-04-29 21:48:29.404360: step 680, total loss = nan, (0.6 examples/sec; 26.194 sec/batch; 3269h:16m:28s remains)
+2020-04-29 21:52:00.195728: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 21:52:50.838793: step 690, total loss = nan, (0.6 examples/sec; 26.368 sec/batch; 3290h:56m:43s remains)
+INFO - root - 2020-04-29 21:57:12.986491: step 700, total loss = nan, (0.6 examples/sec; 26.233 sec/batch; 3274h:00m:49s remains)
+INFO - root - 2020-04-29 22:01:35.642591: step 710, total loss = nan, (0.6 examples/sec; 26.288 sec/batch; 3280h:45m:54s remains)
+2020-04-29 22:01:37.043873: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 22:05:56.842877: step 720, total loss = nan, (0.6 examples/sec; 26.095 sec/batch; 3256h:37m:03s remains)
+INFO - root - 2020-04-29 22:10:18.635529: step 730, total loss = nan, (0.6 examples/sec; 26.084 sec/batch; 3255h:11m:43s remains)
+2020-04-29 22:10:46.317820: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 22:14:40.923987: step 740, total loss = nan, (0.6 examples/sec; 26.115 sec/batch; 3258h:58m:33s remains)
+INFO - root - 2020-04-29 22:19:00.751590: step 750, total loss = nan, (0.6 examples/sec; 26.097 sec/batch; 3256h:38m:24s remains)
+INFO - root - 2020-04-29 22:23:22.940140: step 760, total loss = nan, (0.6 examples/sec; 26.087 sec/batch; 3255h:24m:30s remains)
+INFO - root - 2020-04-29 22:27:44.643694: step 770, total loss = nan, (0.6 examples/sec; 26.335 sec/batch; 3286h:16m:56s remains)
+INFO - root - 2020-04-29 22:32:06.667456: step 780, total loss = nan, (0.6 examples/sec; 26.115 sec/batch; 3258h:42m:49s remains)
+2020-04-29 22:32:34.042859: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 22:33:52.789970: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 22:36:28.594670: step 790, total loss = nan, (0.6 examples/sec; 26.132 sec/batch; 3260h:46m:53s remains)
+INFO - root - 2020-04-29 22:40:50.888362: step 800, total loss = nan, (0.6 examples/sec; 26.245 sec/batch; 3274h:50m:32s remains)
+INFO - root - 2020-04-29 22:45:13.026410: step 810, total loss = nan, (0.6 examples/sec; 26.145 sec/batch; 3262h:16m:51s remains)
+INFO - root - 2020-04-29 22:49:35.376097: step 820, total loss = nan, (0.6 examples/sec; 26.306 sec/batch; 3282h:15m:47s remains)
+INFO - root - 2020-04-29 22:53:57.862603: step 830, total loss = nan, (0.6 examples/sec; 26.165 sec/batch; 3264h:35m:19s remains)
+2020-04-29 22:54:25.415507: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 22:56:10.448820: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 22:57:55.193895: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 22:58:19.871033: step 840, total loss = nan, (0.6 examples/sec; 26.126 sec/batch; 3259h:39m:22s remains)
+INFO - root - 2020-04-29 23:02:42.405347: step 850, total loss = nan, (0.6 examples/sec; 26.152 sec/batch; 3262h:48m:21s remains)
+INFO - root - 2020-04-29 23:07:04.742260: step 860, total loss = nan, (0.6 examples/sec; 26.294 sec/batch; 3280h:25m:02s remains)
+2020-04-29 23:09:17.299154: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 23:11:26.844543: step 870, total loss = nan, (0.6 examples/sec; 26.337 sec/batch; 3285h:42m:49s remains)
+2020-04-29 23:12:47.223620: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 23:15:49.497873: step 880, total loss = nan, (0.6 examples/sec; 26.310 sec/batch; 3282h:16m:22s remains)
+2020-04-29 23:18:54.333547: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 23:20:11.584581: step 890, total loss = nan, (0.6 examples/sec; 26.231 sec/batch; 3272h:21m:42s remains)
+2020-04-29 23:20:12.947664: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-29 23:21:58.223143: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 23:24:34.085623: step 900, total loss = nan, (0.6 examples/sec; 26.278 sec/batch; 3278h:11m:11s remains)
+INFO - root - 2020-04-29 23:28:56.801006: step 910, total loss = nan, (0.6 examples/sec; 26.349 sec/batch; 3286h:58m:28s remains)
+INFO - root - 2020-04-29 23:33:19.044953: step 920, total loss = nan, (0.6 examples/sec; 26.391 sec/batch; 3292h:06m:04s remains)
+INFO - root - 2020-04-29 23:37:41.817307: step 930, total loss = nan, (0.6 examples/sec; 26.236 sec/batch; 3272h:42m:17s remains)
+2020-04-29 23:39:54.229090: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-29 23:42:03.499900: step 940, total loss = nan, (0.6 examples/sec; 26.117 sec/batch; 3257h:49m:42s remains)
+INFO - root - 2020-04-29 23:46:25.114812: step 950, total loss = nan, (0.6 examples/sec; 26.126 sec/batch; 3258h:53m:50s remains)
+INFO - root - 2020-04-29 23:50:47.228551: step 960, total loss = nan, (0.6 examples/sec; 26.193 sec/batch; 3267h:12m:03s remains)
+INFO - root - 2020-04-29 23:55:09.371157: step 970, total loss = nan, (0.6 examples/sec; 26.221 sec/batch; 3270h:32m:29s remains)
+INFO - root - 2020-04-29 23:59:31.487390: step 980, total loss = nan, (0.6 examples/sec; 26.165 sec/batch; 3263h:26m:54s remains)
+2020-04-30 00:00:25.386342: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-30 00:02:36.815232: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 00:03:54.122437: step 990, total loss = nan, (0.6 examples/sec; 26.210 sec/batch; 3269h:05m:00s remains)
+INFO - root - 2020-04-30 00:08:13.835830: step 1000, total loss = nan, (0.6 examples/sec; 26.004 sec/batch; 3243h:20m:05s remains)
+INFO - root - 2020-04-30 00:12:36.632827: step 1010, total loss = nan, (0.6 examples/sec; 26.215 sec/batch; 3269h:33m:55s remains)
+2020-04-30 00:14:22.965777: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 00:16:58.886495: step 1020, total loss = nan, (0.6 examples/sec; 26.302 sec/batch; 3280h:20m:56s remains)
+INFO - root - 2020-04-30 00:21:21.243049: step 1030, total loss = nan, (0.6 examples/sec; 26.085 sec/batch; 3253h:06m:36s remains)
+INFO - root - 2020-04-30 00:25:44.234233: step 1040, total loss = nan, (0.6 examples/sec; 26.180 sec/batch; 3264h:53m:17s remains)
+2020-04-30 00:27:57.022080: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 00:30:07.064049: step 1050, total loss = nan, (0.6 examples/sec; 26.372 sec/batch; 3288h:47m:32s remains)
+INFO - root - 2020-04-30 00:34:29.163033: step 1060, total loss = nan, (0.6 examples/sec; 26.134 sec/batch; 3259h:01m:10s remains)
+2020-04-30 00:37:08.260351: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 00:38:52.163511: step 1070, total loss = nan, (0.6 examples/sec; 26.163 sec/batch; 3262h:38m:01s remains)
+INFO - root - 2020-04-30 00:43:14.877621: step 1080, total loss = nan, (0.6 examples/sec; 26.312 sec/batch; 3281h:08m:52s remains)
+2020-04-30 00:44:08.804391: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-30 00:46:46.523442: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 00:47:37.552356: step 1090, total loss = nan, (0.6 examples/sec; 26.195 sec/batch; 3266h:23m:28s remains)
+2020-04-30 00:47:38.965452: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-30 00:48:31.408966: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 00:51:59.998720: step 1100, total loss = nan, (0.6 examples/sec; 26.110 sec/batch; 3255h:46m:06s remains)
+2020-04-30 00:52:01.333744: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 00:56:21.801651: step 1110, total loss = nan, (0.6 examples/sec; 26.231 sec/batch; 3270h:49m:17s remains)
+2020-04-30 00:59:00.307055: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 01:00:43.939784: step 1120, total loss = nan, (0.6 examples/sec; 26.202 sec/batch; 3267h:06m:23s remains)
+2020-04-30 01:00:44.935651: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-30 01:00:45.043459: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-30 01:00:45.175618: W tensorflow/stream_executor/cuda/cuda_dnn.cc:3797] 
+2020-04-30 01:01:10.905070: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-30 01:01:10.918010: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+2020-04-30 01:01:36.805441: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 01:05:15.388708: step 1130, total loss = nan, (0.6 examples/sec; 26.265 sec/batch; 3274h:55m:48s remains)
+2020-04-30 01:07:54.877087: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 01:09:38.555933: step 1140, total loss = nan, (0.6 examples/sec; 26.124 sec/batch; 3257h:12m:04s remains)
+2020-04-30 01:10:32.165133: W tensorflow/stream_executor/cuda/cuda_dnn.cc:2640] 
+INFO - root - 2020-04-30 01:14:01.161088: step 1150, total loss = nan, (0.6 examples/sec; 26.357 sec/batch; 3286h:11m:41s remains)
